@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- My Style Sheet-->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <title>Score Keeper</title>
+  <!--Bootstrap Script Tags-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="../js/scoreKeeper.js"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!--
+    <img src="images/trophy.svg" class="logo-responsive">
+  -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="score.html">Score Board</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="disney.html">Disney Ride Times</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div>
+
+  <body>
+    <div id="container">
+      <br>
+      <div class="center-div">
+        <h3 id="heading" class="header-respond">
+          How many players are there?
+        </h3>
+      </div>
+      <div class="container-center center-div">
+        <select id="numPlayers" class="text-respond">
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+          <option value=4>4</option>
+          <option value=5>5</option>
+          <option value=6>6</option>
+          <option value=7>7</option>
+          <option value=8>8</option>
+          <option value=9>9</option>
+          <option value=10>10</option>
+        </select>
+        <input type="button" class="text-respond" value="Start" id="btnGetNumPlayers" onclick="getNumPlayers();">
+        <br>
+        <p id="winnerName" class="text-respond"></p>
+        <div id="btnHolder" class=" btn-center">
+          <input type="button" class="text-respond" value="Play Again" id="btnPlayAgain" onclick="playAgain();"
+            style="display: none"><br>
+          <input type="button" class="text-respond" value="Reset Game" id="btnResetGame"
+            onclick="window.location.href ='score.html';" style="display: none"><br>
+        </div>
+      </div>
+
+
+      <div id="playerInput" class="container-center center-div">
+        <div style="display: none" id="player1Div">
+          <div><label id="player1Name" class="text-respond"></label></div>
+          <div><input type="text" id="player1Score" class="text-respond"></div>
+          <div><label id="player1Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player2Div">
+          <div><label id="player2Name" class="text-respond"></label></div>
+          <div><input type="text" id="player2Score" class="text-respond"></div>
+          <div><label id="player2Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player3Div">
+          <div><label id="player3Name" class="text-respond"></label></div>
+          <div><input type="text" id="player3Score" class="text-respond"></div>
+          <div><label id="player3Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player4Div">
+          <div><label id="player4Name" class="text-respond"></label></div>
+          <div><input type="text" id="player4Score" class="text-respond"></div>
+          <div><label id="player4Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player5Div">
+          <div><label id="player5Name" class="text-respond"></label></div>
+          <div><input type="text" id="player5Score" class="text-respond"></div>
+          <div><label id="player5Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player6Div">
+          <div><label id="player6Name" class="text-respond"></label></div>
+          <div><input type="text" id="player6Score" class="text-respond"></div>
+          <div><label id="player6Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player7Div">
+          <div><label id="player7Name" class="text-respond"></label></div>
+          <div><input type="text" id="player7Score" class="text-respond"></div>
+          <div><label id="player7Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player8Div">
+          <div><label id="player8Name" class="text-respond"></label></div>
+          <div><input type="text" id="player8Score" class="text-respond"></div>
+          <div><label id="player8Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player9Div">
+          <div><label id="player9Name" class="text-respond"></label></div>
+          <div><input type="text" id="player9Score" class="text-respond"></div>
+          <div><label id="player9Total" class="text-respond"></label><br></div>
+        </div>
+
+        <div style="display: none" id="player10Div">
+          <div><label id="player10Name" class="text-respond"></label></div>
+          <div><input type="text" id="player10Score" class="text-respond"></div>
+          <div><label id="player10Total" class="text-respond"></label><br></div>
+        </div>
+        <br>
+        <div class="btn-center">
+          <input type="button" class="text-respond" value="Start Game" id="btnStartGame" onclick="getPlayerNames();"
+            style="display: none"><br>
+          <input type="button" class="text-respond" value="Add Points" id="btnAddScore" onclick="addScore();"
+            style="display: none"><br>
+          <input type="button" class="text-respond" value="End Game" id="btnEndGame" onclick="endGame();"
+            style="display: none"><br>
+        </div>
+      </div>
+    </div>
+    <!--footer-->
+    <div class="card text-center bottom-div">
+      <div class="card-header">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Thanks for visiting my site!</h5>
+        <p class="card-text">Check out my GitHub repo for this project</p>
+        <a href="https://github.com/zachbmarshall/CreativeProject"
+          class="btn btn-primary">Go There</a>
+      </div>
+      <div class="card-footer text-muted">
+        Copyright @Zach Marshall 2020
+      </div>
+    </div>
+  </body>
+</div>
+
+</html>

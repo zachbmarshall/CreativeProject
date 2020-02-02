@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- My Style Sheet-->
+    <link rel="stylesheet" href="../css/homeStyles.css" />
+    <title>Score Keeper</title>
+    <!--Bootstrap Script Tags-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="../js/scoreKeeper.js"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--
+    <img src="images/trophy.svg" class="logo-responsive">
+  -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="score.html">Score Board</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="disney.html">Disney Ride Times</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                    <br>
+                    <h3 class="header-respond">What's the Wait?</h3>
+                    <div id="container-inside" style="text-align: center;" class="lgtext-respond">
+                        <p>Be the family Disney hero. Find the best times to visit each of your favorite rides 
+                            for a quick and fun filled day at the Magic Kingdom.
+                        </p><br>
+                        <p style="font-size: 14px;">*note the following data visualizations are not real, they are just filler until the actual
+                            data is posted.
+                        </p><br>
+                    </div>
+                <form>
+                    <nav>
+                        <form class="form-inline">
+                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </nav><br><br>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Disneyland Ride</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Big Thunder Mountain Railroad</option>
+                        <option>Buzz Lightyear Astro Blasters</option>
+                        <option>Indiana Jones Adventure</option>
+                        <option>Jungle Cruise</option>
+                        <option>Matterhorn Bobsleds</option>
+                        <option>Pirates of the Caribbean</option>
+                        <option>Space Mountain</option>
+                        <option>Splash Mountain</option>
+                      </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <img src="../images/disneywait.jpg">
+        </div>
+        <br>
+    </div>
+    <!--footer-->
+    <div class="card text-center bottom-div">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Thanks for visiting my site!</h5>
+            <p class="card-text">Check out my GitHub repo for this project</p>
+            <a href="https://github.com/zachbmarshall/CreativeProject"
+                class="btn btn-primary">Go There</a>
+        </div>
+        <div class="card-footer text-muted">
+            Copyright @Zach Marshall 2020
+        </div>
+    </div>
+    </body>
+</div>
+
+</html>

@@ -1,0 +1,133 @@
+body {
+    background-color: #eaf9ff;
+  }
+/* Menu color */
+.bg-light {
+    background-color: #98c8ff !important;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+/* Active Menu Color */
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float: none;
+}
+
+.Absolute-Center {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+  } 
+
+
+/* Image Grid */
+.portfolio {
+    display: grid;
+    grid-template: auto auto auto auto auto / 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.portfolio-2 {
+    display: grid;
+    grid-template: auto auto auto auto auto / 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+
+@media screen and (min-width: 601px) {
+    .header-respond{
+        font-size: 30px;
+        text-align: center;
+    }
+    .text-respond{
+        font-size: 18px;
+        text-align: center;
+    }
+    .logo-responsive {
+        width: 100%;
+        max-width: 40px;
+        height: auto;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .header-respond{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .text-respond{
+        font-size: 3vw;
+        text-align: center;
+    }
+    .logo-responsive {
+        width: 100%;
+        max-width: 30px;
+        height: auto;
+    }
+}
+
+.container-center{
+    text-align: center;
+}
+
+/* Center a Div */
+.center-div{
+     margin: 0 auto;
+     width: auto; 
+     text-align: center;
+}
+
+.btn-center{
+    display: inline-block;
+    text-align: center;
+}
+
+.bottom-div{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+#container{
+    padding-bottom: 110px;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #98c8ff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  .card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: #98c8ff;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+  }

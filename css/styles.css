@@ -1,6 +1,4 @@
-body {
-    background-color: #eaf9ff;
-  }
+
 /* Menu color */
 .bg-light {
     background-color: #98c8ff !important;
@@ -118,12 +116,21 @@ body {
 #container{
     padding-bottom: 110px;
 }
+.select{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+  }
 
 /* to keep the footer at the bottom */
 #footer {
     position: absolute;
     bottom: 0;
-    background-color: rgb(66, 66, 66);
+    background-color:#9bd1fa;
     width: 100%;
     height: 5rem;            /* Footer height */
     text-align: center;
@@ -135,7 +142,6 @@ body {
   .page-container {
     position: relative;
     min-height: 100vh;
-    background-color: rgb(255,255,255,.8);
   }
 
   /* end footer */

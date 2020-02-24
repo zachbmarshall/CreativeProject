@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- My Style Sheet-->
+    <link rel="stylesheet" href="../css/homeStyles.css" />
+    <link rel="stylesheet" href="../css/sherlockStyles.css" />
+    <title>Baker Street</title>
+    <!--Bootstrap Script Tags-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="../js/clues.js"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--
+    <img src="images/trophy.svg" class="logo-responsive">
+  -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="score.html">Score Board</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="disney.html">Disney Ride Times</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="bakerstreet.html">221 B Baker Street</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div>
+
+    <body>
+        <div id="container" class="page-container">
+            <div id="content-wrap">
+                <div class="center" id="getCaseNum">
+                    <p>What is the case #?</p>
+                    <input type="number" step="1" min=1 id="caseNum">
+                    <button type="button" onclick="startGame()">Start Game</button>
+                </div>
+                <div class="center" id="outputCase">
+                    <p class="header" id="outputCaseTitle"></p>
+                    <p id="outputCaseText"></p>
+                </div>
+                <div class="center" id="getClue" style="visibility: hidden;">
+                    <p id="roomQuestion">What location are you in?</p>
+                    <select id="userLocation">
+                        <option value="-1"></option>
+                        <option value="0">Apothecary</option>
+                        <option value="1">Bank</option>
+                        <option value="2">Carriage Depot</option>
+                        <option value="3">Dock</option>
+                        <option value="4">Hotel</option>
+                        <option value="5">Locksmith</option>
+                        <option value="6">Museum</option>
+                        <option value="7">Newspaper Shop</option>
+                        <option value="8">Park</option>
+                        <option value="9">Pawnbroker</option>
+                        <option value="10">Playhouse</option>
+                        <option value="11">Pub</option>
+                        <option value="12">Scotland Yard</option>
+                        <option value="13">Tobacconist</option>
+                    </select>
+                    <button type="button" onclick="getClue()">Get Clue</button>
+                    <p id="outputClueText"></p>
+
+                </div>
+            </div>
+            <!-- footer -->
+            <footer id="footer">
+                <p id="footer-text">Check out my <a
+                        href="https://github.com/BYU-CS-260-Winter-2020/lab-2-weather-app-zachbmarshall">GitHub Repo</a>
+                    for
+                    this project</p>
+                <p>Copyright @Zach Marshall 2020</p>
+            </footer>
+        </div>
+    </body>
+</div>
+
+</html>

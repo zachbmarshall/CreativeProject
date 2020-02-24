@@ -1,0 +1,117 @@
+body{
+
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    background-image: url("../images/bg.jpg");   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.container-center{
+    text-align: center;
+}
+
+/* Center a Div */
+.center-div{
+     margin: 0 auto;
+     width: auto; 
+     text-align: center;
+}
+
+.btn-center{
+    display: inline-block;
+    text-align: center;
+}
+
+.bottom-div{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+#container{
+    padding-bottom: 110px;
+}
+
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+
+}
+.card {
+    width: 350px;
+    display: inline-block;
+    background: transparent;
+    text-align: center;
+  } 
+
+  .page-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(255,255,255,.8);
+  }
+  
+  #content-wrap {
+    padding-bottom: 5rem;    /* Footer height */
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(66, 66, 66);
+    width: 100%;
+    height: 5rem;            /* Footer height */
+    text-align: center;
+    color: whitesmoke;
+  }
+
+  #f_lastcheck{
+    font-style: italic;
+  }
+  #prompts{
+    background-color: rgb(255,255,255,.5);
+  }
+.select{
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+img.animated-gif{
+  width: 120px;
+  height: auto;
+}

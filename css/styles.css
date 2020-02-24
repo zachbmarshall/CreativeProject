@@ -119,15 +119,23 @@ body {
     padding-bottom: 110px;
 }
 
-.card-header {
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: #98c8ff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+/* to keep the footer at the bottom */
+#footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(66, 66, 66);
+    width: 100%;
+    height: 5rem;            /* Footer height */
+    text-align: center;
+    color: whitesmoke;
+  }
+  #content-wrap {
+    padding-bottom: 5rem;    /* Footer height */
+  }
+  .page-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(255,255,255,.8);
   }
 
-  .card-footer {
-    padding: 0.75rem 1.25rem;
-    background-color: #98c8ff;
-    border-top: 1px solid rgba(0, 0, 0, 0.125);
-  }
+  /* end footer */

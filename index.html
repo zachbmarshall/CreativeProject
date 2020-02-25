@@ -2,111 +2,116 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- My Style Sheet-->
-  <link rel="stylesheet" href="css/homeStyles.css" />
-  <title>Score Keeper</title>
-  <!--Bootstrap Script Tags-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-  <script src="js/scoreKeeper.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zach Marshall</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+    <link href="css/newStyles.css" rel="stylesheet">
+
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!--
-    <img src="images/trophy.svg" class="logo-responsive">
-  -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/score.html">Score Board</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/disney.html">Disney Ride Times</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/bakerstreet.html">221 B Baker Street</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/contact.html">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
 
-<div>
+<body id="page-top">
 
-  <body>
-    <div id="container" class="page-container">
-      <div id="content-wrap">
-        <br>
-        <div class="center-div">
-          <h3 class="header-respond">
-            The Multi-App Website
-          </h3>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Game Night</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger menu-link-item" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger menu-link-item" href="pages/score.html">Score Keeper</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger menu-link-item" href="pages/disney.html">Disney Ride
+                            Times</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger menu-link-item" href="pages/bakerstreet.html">221 B Baker
+                            Street</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger menu-link-item" href="pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div id="container-inside" class="lgtext-respond">
-          <p>I wanted to build a website that wasn't just a one-and-done school project that I would never touch
-            again. I wanted to use this creative website project as an opportunity to build out a website that I will
-            get some use out of.<br><br>
-            That's why I built this Multi-App website. I started building out different tabs for different applications
-            that I would use outside of a school setting. These are semi-random apps that do no have anything to do with
-            each other at all, but they are applications that I would use. I have two ideas so far for these
-            applications:
-          </p>
-          <br>
-          <ul>
-            <li>
-              <a href="pages/score.html"><strong>Score Board:</strong></a>
-              <p class="smtext-respond">This app takes a certain number of players and keeps
-                track of their scores for them. It automatically rearranges in decending order by score. This is for
-                those inconvenient times
-                that you are playing a game and want to keep track of the score, but you don't want to write it down and
-                keep track by hand.
-              </p>
-            </li>
-            <li>
-              <a href="pages/disney.html"><strong>Disney Ride Times</strong></a>
-              <p class="smtext-respond">This app gets the ride times at
-                Disney Land and shows you the current wait times and then allows you to compare the current ride wait
-                times to historical wait
-                times. That way you can see when is the best time to visit the Happiest Place on Earth and when to ride
-                each ride.
-              </p>
-            </li>
-          </ul>
-        </div>
+    </nav>
 
-        <div>
-
+    <header class="masthead" id="container">
+        <div class="container h-100" id="main">
+            <div class="row h-100">
+                <div class="col-lg-7 my-auto">
+                    <div class="header-content mx-auto">
+                        <h1 class="mb-5">Pick an app, get playing!</h1>
+                        <p>Score Keeper</p>
+                        <a href="pages/score.html" class="btn btn-outline btn-xl js-scroll-trigger"><img
+                                src="img/trophy.png" class="mainImg"></a><br>
+                    </div>
+                    <div class="header-content mx-auto">
+                        <p>Disney Ride Times</p>
+                        <a href="pages/disney.html" class="btn btn-outline btn-xl js-scroll-trigger"><img
+                                src="img/dis.png" class="mainImg"></a><br>
+                    </div>
+                    <div class="header-content mx-auto">
+                        <p>221 B Baker Street</p>
+                        <a href="pages/bakerstreet.html" class="btn btn-outline btn-xl js-scroll-trigger"><img
+                                src="img/sherlock.png" class="mainImg"></a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <footer id="footer">
-        <p id="footer-text">Check out my <a
-            href="https://github.com/BYU-CS-260-Winter-2020/lab-2-weather-app-zachbmarshall">GitHub Repo</a> for
-          this project</p>
-        <p>Copyright @Zach Marshall 2020</p>
-      </footer>
-    </div>
-  </body>
-</div>
+    </header>
+
+
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; Copyright @Zach Marshall 2020. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="https://github.com/zachbmarshall/CreativeProject">GitHub Repo</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/new-age.min.js"></script>
+
+</body>
 
 </html>

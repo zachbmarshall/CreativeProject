@@ -382,7 +382,7 @@ function displayData(arr, openTime1, openTime2, checkTime) {
         openTime2 = tempTime;
     }
     display += "<h4>Ride Wait Times:</h4>";
-    display += "" + checkTime + "<br>  <sup>*Swipe left to see more rides</sup>";
+    display += "" + checkTime + "<br>";
     display += "<h2><b>" + currPark + "</b></h2>";
     display += "<p>" + openTime1 + "</p>";
     display += "<h4>" + currLoc + "</h4>";
@@ -409,26 +409,30 @@ function displayData(arr, openTime1, openTime2, checkTime) {
         }
         if (arr[i]["status"] == "Go" || arr[i]["waitTime"] == "Open") {
             display += "<div class=\"card\" id=\"short_wait\">";
+            display += "<div class=\"innerCard\">";
             display += arr[i]["name"] + "<br>";
             display += arr[i]["waitTime"] + " <sup>(Go)</sup>" + "<br>";
-            display += "</div>";
+            display += "</div></div>";
         } else if (arr[i]["status"] == "Wait") {
             display += "<div class=\"card\" id=\"long_wait\">";
+            display += "<div class=\"innerCard\">";
             display += arr[i]["name"] + "<br>";
             display += arr[i]["waitTime"] + " <sup>(Wait)</sup>" + "<br>";
-            display += "</div>";
+            display += "</div></div>";
         }
         else if (arr[i]["waitTime"] == "Closed"||arr[i]["waitTime"] == "Refurbishment") {
             display += "<div class=\"card\" id=\"closed_wait\">";
+            display += "<div class=\"innerCard\">";
             display += arr[i]["name"] + "<br>";
             display += arr[i]["waitTime"] + "<br>";
-            display += "</div>";
+            display += "</div></div>";
         }
         else {
             display += "<div class=\"card\" id=\"normal_wait\">";
+            display += "<div class=\"innerCard\">";
             display += arr[i]["name"] + "<br>";
             display += arr[i]["waitTime"] + "<br>";
-            display += "</div>";
+            display += "</div></div>";
         }
 
 

@@ -17,7 +17,6 @@ var testRide = {
 
 $.ajax({
   url: (proxyUrl + url1), success: function (htmlStr) {
-    console.log("test");
     let startPos = htmlStr.indexOf("Operating Hours For");
     let endPos = htmlStr.indexOf("The Wait and Go");
     let tableData = htmlStr.substring(startPos, endPos);
@@ -32,7 +31,6 @@ $.ajax({
       }
       openTime1 += tableData[i];
     }
-    console.log(openTime1);
 
     for (let i = tableData.indexOf("<p>Last Check at"); i < tableData.indexOf("<p>Last Check at") + 100; i++) {
       if (tableData.substring(i, i + 6) == "</div>") {
@@ -141,7 +139,6 @@ $.ajax({
           }
           openTime2 += tableData[i];
         }
-        console.log(openTime2);
 
         for (let i = 0; i < ridesArr.length; i++) {
           if (i == ridesArr.length - 1) {
@@ -210,10 +207,6 @@ $.ajax({
           }
         }
 
-        for (let i = 0; i < rides.length; i++) {
-          console.log(rides[i]["name"] + " " + rides[i]["waitTime"] + " " + rides[i]["location"] + " " + rides[i]["thrillType"] + " " + rides[i]["parkName"]);
-        }
-
         document.getElementById("isLoaded").style.display = "block";
         rides = fixWaitTime(rides);
         rides = orderData(rides);
@@ -223,7 +216,7 @@ $.ajax({
         document.getElementById("parkSelect").addEventListener("input", function (event) {
           let park = document.getElementById("parkSelect");
           let parkChoice = park.options[park.selectedIndex].value;
-          if (parkChoice = "null"){
+          if (parkChoice == "null"){
             parkChoice = "both";
           }
 
@@ -249,23 +242,23 @@ $.ajax({
         document.getElementById("sortRides").addEventListener("click", function (event) {
           let validRides = rides;
           let parkChoice = document.getElementById("parkSelect").value;
-          if (parkChoice = "null"){
+          if (parkChoice == "null"){
             parkChoice = "both";
           }
           let thrillChoice = document.getElementById("thrillSelect").value;
-          if (thrillChoice = "null"){
+          if (thrillChoice == "null"){
             thrillChoice = "allRides";
           }
           let locChoice = "allLands";
           if (parkChoice == "California Adventures") {
             locChoice = document.getElementById("CASelect").value;
-            if (locChoice = "null"){
+            if (locChoice == "null"){
               locChoice = "allLands";
             }
           }
           else if (parkChoice == "Disneyland") {
             locChoice = document.getElementById("disneySelect").value;
-            if (locChoice = "null"){
+            if (locChoice == "null"){
               locChoice = "allLands";
             }
           }

@@ -29,9 +29,9 @@ function getNumPlayers() {
         for (var iCount = 0; iCount < iNumPlayers; iCount++) {
             //Displays all of the divs for the same number of players
             display += "<div id=\"player" + (iCount + 1) + "Div\">"
-            display += "<div><label id=\"player" + (iCount + 1) + "Name\" class=\"text-respond\">Enter Player " + (iCount + 1) + "'s Name</label></div>";
-            display += "<div><input type=\"text\" id=\"player" + (iCount + 1) + "Score\" class=\"text-respond\"></input></div>";
-            display += "<div><label id=\"player" + (iCount + 1) + "Total\" class=\"text-respond\"></label></div>";
+            display += "<div><label id=\"player" + (iCount + 1) + "Name\">Enter Player " + (iCount + 1) + "'s Name</label></div>";
+            display += "<div><input type=\"text\" id=\"player" + (iCount + 1) + "Score\"></input></div>";
+            display += "<div><label id=\"player" + (iCount + 1) + "Total\"></label></div>";
             display += "</div>"
         }
         display += "<div class=\"centerBtn\"><div id=\"btnStartGame\" style=\"display: none\"><input type=\"checkbox\" id=\"lowScore\" name=\"lowScore\" value=\"lowScore\"><label for=\"lowScore\"> Lowest score wins</label><input type=\"button\" class=\"text-respond\" value=\"Start Game\" onclick=\"getPlayerNames();\"><br><br></div><div id=\"btnAddScore\" style=\"display: none\"><input type=\"button\" class=\"text-respond\" value=\"Add Points\" onclick=\"addScore();\" href=\"#heading\"><br><br></div><div id=\"btnEndGame\" style=\"display: none\"><input type=\"button\" class=\"text-respond\" value=\"End Game\" onclick=\"endGame();\" href=\"#heading\"></div></div>";

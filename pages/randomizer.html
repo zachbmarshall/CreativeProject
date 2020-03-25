@@ -66,41 +66,33 @@
     </div>
   </nav>
 
-  <header class="masthead" id="container-score">
+  <header class="masthead" id="container">
     <div class="container h-100">
-      <div class="row h-100 scrollDiv">
-        <div class="col-lg-7 my-auto">
-          <div class="header-content mx-auto">
-            <h1 class="mb-5" id="heading">How many people are playing?</h1>
-            <input id="numPlayers" class="selectOption" type="number" placeholder="Enter a number between 1-100">
-            </input>
-            <input type="button" class="text-respond selectBtn inputOption" value="Start" id="btnGetNumPlayers"
-              onclick="getNumPlayers();">
-            <h4 id="winnerName" class="text-respond"></h4>
-            <div class="centerBtn inputOption">
-              <div id="btnResetGame" style="display: none">
-                <input type="button" class="text-respond" value="Reset Game"
-                  onclick="window.location.href ='score.html';"><br>
-              </div>
-            </div>
-            <div id="playerInfo" class="container-center center-div inputOption">
-            </div>
+
+<div class="header-content mx-auto">
+        <div id="app">
+          <form v-on:submit.prevent="addOption">
+            <input type="text" v-model="currOption" placeholder="Add an option" class="selectOption">
+            <button type="submit" class="text-respond selectBtn">Add</button>
+          </form>
+          <br>
+          <div class="controls text-respond selectBtn inputOption centerBtn">
+            <button v-on:click="randomize()" v-show="options.length > 0 && (finalChoice == '' || finalChoice == undefined) ">Randomize</button>
+            <button v-on:click="viewList()" v-show="options.length > 0 && (finalChoice != '' && finalChoice != undefined)">View List</button>
+            <button v-on:click="reset()" v-show="options.length > 0 && (finalChoice != '' && finalChoice != undefined)">Reset</button>
+            <br>
           </div>
-        </div>
-      </div>
-      <div class="btn-center selectBtn" id="main">
-        <div class="centerBtn ">
-        </div>
-        <div class="col-lg-5 my-auto">
-          <div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
-            </div>
-          </div>
-        </div>
-        <div>
-        </div>
+          <ul>
+            <li v-for="item in options" v-show="finalChoice == '' || finalChoice == undefined" class="randomItems container-center center-div inputOption">
+              <label>{{ item }}</label>
+              <button v-on:click="deleteItem(item)" class="delete">x</button>
+            </li>
+          </ul>
+          <p v-show="finalChoice != '' && finalChoice != undefined" class="container-center center-div inputOption">The random choice is: {{ finalChoice }}</p>
+          <p v-show="checkError()" class="container-center center-div inputOption">Please add items to be randomized</p>
       </div>
     </div>
+  </div>
   </header>
 
   <footer id="footer">
@@ -122,8 +114,9 @@
   <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="../js/new-age.min.js"></script>
-  <script src="../js2/scoreKeeper.js"></script>
+  <script src="../js2/random.js"></script>
 
 </body>
 
